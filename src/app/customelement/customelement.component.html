@@ -1,0 +1,26 @@
+<img src="/images/ng.svg" alt="Angular Logo" class="logo" />
+
+<p>The order is  <strong>{{mydata}}</strong>  from  Angular component.</p>
+<button type="submit" class="btn btn-secondary" (click)="OrderEvent.next()">Angular Component</button>
+
+<table>
+    <th>OrderId</th>
+    <th>CartId</th>
+    <th>ProductId</th>
+    <th>Price</th>
+    <th>Quantity</th>
+    <th>UserId</th>
+    <tbody>
+        <tr *ngFor="let ord of myorders;">
+          <td>{{ord.orderId}}</td>
+          <td>{{ord.cartId}}</td>
+          
+          <td>{{ord.productId}}</td>
+          <td>{{ord.price}}</td>
+          <td>{{ord.quantity}}</td>
+    
+          <td>{{ord.userId}}</td>
+        </tr>
+      </tbody>
+
+</table>
